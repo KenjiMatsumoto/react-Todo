@@ -26,12 +26,14 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: ['node_modules', './app/components'],
     //aliasの指定
     alias: {
-      applicationStyles: 'app/style/app.scss'
+      applicationStyles: 'app/style/app.scss',
+      TodoApp: 'app/components/TodoApp.jsx'
     },
     //ビルド対象に含めたい(requireしている)ファイルの拡張子を指定します
-    extentions: ['','.js','.jsx']
+    extentions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
