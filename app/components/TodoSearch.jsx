@@ -4,7 +4,7 @@ var TodoSearch = React.createClass({
   handleSearch: function () {
     var showCompleted = this.refs.showCompleted.checked;
     var searchText = this.refs.searchText.value;
-
+    //親コンポーネントへ値を渡す(ここだとTodoAppになる)
     this.props.onSearch(showCompleted, searchText);
   },
   render: function() {
