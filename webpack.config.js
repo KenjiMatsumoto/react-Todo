@@ -30,7 +30,8 @@ module.exports = {
     modulesDirectories: ['node_modules', './app/components', './app/api'],
     //aliasの指定
     alias: {
-      applicationStyles: 'app/style/app.scss'
+      applicationStyles: 'app/style/app.scss',
+      actions: 'app/actions/actions.jsx'
     },
     //ビルド対象に含めたい(requireしている)ファイルの拡張子を指定します
     extensions: ['', '.js', '.jsx']
