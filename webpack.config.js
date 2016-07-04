@@ -31,7 +31,8 @@ module.exports = {
     //aliasの指定
     alias: {
       applicationStyles: 'app/style/app.scss',
-      actions: 'app/actions/actions.jsx'
+      actions: 'app/actions/actions.jsx',
+      reducers: 'app/reducers/reducers.jsx'
     },
     //ビルド対象に含めたい(requireしている)ファイルの拡張子を指定します
     extensions: ['', '.js', '.jsx']
