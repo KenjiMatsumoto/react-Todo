@@ -30,6 +30,7 @@ module.exports = {
     modulesDirectories: ['node_modules', './app/components', './app/api'],
     //aliasの指定
     alias: {
+      app: 'app',
       applicationStyles: 'app/style/app.scss',
       actions: 'app/actions/actions.jsx',
       reducers: 'app/reducers/reducers.jsx',
