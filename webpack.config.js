@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 module.exports = {
   //ビルドの起点となるファイルパスの指定
   //Arrayやobjectでの複数指定が可能
@@ -16,6 +18,11 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
     })
   ],
   output: {
@@ -64,5 +71,5 @@ module.exports = {
   },
   //以下の記述をすることでbundleファイルでの参照ではなく
   //自分で作成したファイルでのdebugが可能となる
-  devtool: 'cheap-module-eval-source-map'
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-module-eval-source-map'
 };
